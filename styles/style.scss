@@ -1,0 +1,20 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  .body {
+    width: 320px;
+    height: 100%;
+    font-size: 20px;
+  }
+}
+
+@import "./variables";
+@import "./contact";
+@import "./witifood";
+@import "./modal";
+@import "./menu";
+@import "./find-meal";
+@import "./recipies";
+@import "./navbar-end";
+@import "./navbar-end-media";

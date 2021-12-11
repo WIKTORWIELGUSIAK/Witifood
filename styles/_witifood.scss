@@ -1,0 +1,55 @@
+.page-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin-top: 9vh;
+  height: 91vh;
+  animation: background-animation 25s ease-in-out infinite;
+  background-size: cover;
+}
+.content {
+  display: flex;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 91vh;
+  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  color: white;
+  @media screen and (min-width: $width-tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  h2 {
+    display: none;
+    font-size: 4em;
+    text-align: center;
+    @media screen and (min-width: $width-tablet) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  p {
+    padding-right: 2rem;
+    padding-left: 2rem;
+    display: flex;
+    width: 100%;
+    text-align: justify;
+    font-size: 1.5em;
+  }
+}
+
+@keyframes background-animation {
+  0%,
+  100% {
+    background-image: url(../photos/1.jpg);
+  }
+  33% {
+    background-image: url(../photos/2.jpg);
+  }
+  66% {
+    background-image: url(../photos/3.jpg);
+  }
+}
