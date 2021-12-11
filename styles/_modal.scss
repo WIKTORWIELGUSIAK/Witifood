@@ -15,6 +15,8 @@ li {
   opacity: 0;
   transition: visibility 0s, opacity 0.5s;
   .modal {
+    position: relative;
+    display: grid;
     background-color: white;
     width: 80%;
     height: 60vh;
@@ -25,24 +27,28 @@ li {
     font-size: 0.7em;
     display: flex;
     flex-direction: column;
-    .contact {
-      display: grid;
-      grid-template-rows: 1fr;
-      height: 60vh;
-      width: 100%;
-      justify-content: center;
+    .modal-contact {
+      display: flex;
       text-align: center;
-      padding: 0px;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      padding-left: 2em;
+      padding-right: 2em;
       @media screen and(min-width:$width-tablet) {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        grid-template-rows: 1fr;
+        column-gap: 2em;
         align-items: flex-start;
+        padding-left: 0;
       }
-      .contact-map {
+      .modal-contact-map {
         display: none;
-        width: 100%;
-        height: 57.5vh;
         @media screen and(min-width:$width-tablet) {
           display: flex;
           width: 100%;
+          height: 100%;
         }
         iframe {
           display: flex;
@@ -51,8 +57,49 @@ li {
         }
       }
     }
-    .contact-form {
-      margin-top: 1em;
+    .modal-contact-form {
+      display: grid;
+      grid-template-rows: 1fr 4fr;
+      width: 100%;
+      height: 100%;
+      h2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 1em;
+        input {
+          height: 2em;
+          border: 2px solid $leadingColor;
+          border-radius: 1em;
+        }
+        .contact-form-textarea {
+          height: 6em;
+          padding-top: 0.3em;
+          border: 2px solid $leadingColor;
+          border-radius: 1em;
+        }
+        .contact-form-btn {
+          background-color: $leadingColor;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+    .modal-close {
+      .fa-solid {
+        cursor: pointer;
+        display: flex;
+        width: 1em;
+        height: 1em;
+        position: absolute;
+        right: 0;
+        top: 0.5em;
+      }
     }
   }
 }

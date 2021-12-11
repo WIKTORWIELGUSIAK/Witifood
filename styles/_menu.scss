@@ -5,6 +5,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media screen and (min-width: $width-tablet) {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
   .title {
     font-size: 1.5em;
     padding: 1em;
@@ -22,7 +26,7 @@
     @media screen and (min-width: $width-laptopL) {
       margin-top: 1em;
       margin-bottom: 1em;
-      width: 80%;
+      width: 60%;
     }
     .filter-btn {
       color: $leadingColor;
@@ -44,7 +48,7 @@
         font-size: 1em;
       }
       @media screen and (min-width: $width-laptop) {
-        font-size: 1.5em;
+        font-size: 1em;
       }
     }
   }
@@ -77,21 +81,24 @@
       align-items: center;
       justify-content: center;
       @media screen and(min-width:$width-tablet) {
-        height: 30em;
+        height: 25em;
       }
       @media screen and(min-width:$width-laptop) {
-        grid-template-rows: 2fr 1fr;
+        grid-template-rows: 1fr 1fr;
       }
       .photo {
         display: grid;
         grid-column: 1/3;
         width: 100%;
         height: 100%;
+        align-items: center;
+        justify-items: center;
         img {
           object-fit: cover;
-          height: 100%;
-          width: 100%;
-          margin-right: 2em;
+          height: 10em;
+          width: 10em;
+          justify-self: center;
+          align-items: center;
           border-radius: 2em;
           border: 4px solid $leadingColor;
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
@@ -100,7 +107,7 @@
       .item-info {
         grid-row: 2/3;
         grid-column: 1/3;
-        font-size: 0.9em;
+        font-size: 0.8em;
         display: flex;
         height: 100%;
         flex-direction: column;

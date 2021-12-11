@@ -9,12 +9,16 @@
     />
     <title>WitiFood</title>
     <link rel="stylesheet" href="./styles/style.css" />
+    <script
+      src="https://kit.fontawesome.com/469bb27890.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
     <nav class="nav">
       <div class="nav-logo">
-        <a href="./index.html"> WitiFood </a>
+        <a href="#"> WitiFood </a>
       </div>
       <ul class="nav-links">
         <li class="nav-link">
@@ -24,10 +28,9 @@
           <a href="./recepies.html">Receptury</a>
         </li>
 
-<li class="nav-link">
+        <li class="nav-link">
           <a href="./contact.html">Kontakt</a>
         </li>
-
       </ul>
       <div class="burger">
         <div class="lines line1"></div>
@@ -49,8 +52,8 @@
       <button class="modal-btn">Kontakt</button>
       <div class="modal-bg">
         <div class="modal">
-          <div class="contact">
-            <div class="contact-map">
+          <div class="modal-contact">
+            <div class="modal-contact-map">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12183.27001608672!2d19.950184578915458!3d50.06349720907033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b1031fb478d%3A0xa5b676bef7ecd283!2sBarbakan%20Krakowski!5e0!3m2!1spl!2spl!4v1639063833599!5m2!1spl!2spl"
                 width="100%"
@@ -62,7 +65,7 @@
                 tabindex="0"
               ></iframe>
             </div>
-            <div class="contact-form">
+            <div class="modal-contact-form">
               <h2>Contact us</h2>
               <form>
                 <input
@@ -79,11 +82,18 @@
                   placeholder="Message"
                   class="contact-form-textarea"
                 ></textarea>
-                <input type="submit" name="Submit" class="contact-form-btn" />
+                <input
+                  value="Submit"
+                  type="submit"
+                  name="Submit"
+                  class="contact-form-btn"
+                />
               </form>
             </div>
           </div>
-          <span class="modal-close">X</span>
+          <div class="modal-close">
+            <i class="fa-solid fa-xmark fa-2xl"></i>
+          </div>
         </div>
       </div>
     </footer>
