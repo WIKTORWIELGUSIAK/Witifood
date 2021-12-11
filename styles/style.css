@@ -435,6 +435,13 @@ li {
   }
 }
 
+@media screen and (min-width: 1440px) {
+  .menu {
+    padding-left: 10em;
+    padding-right: 10em;
+  }
+}
+
 .menu .title {
   font-size: 1.5em;
   padding: 1em;
