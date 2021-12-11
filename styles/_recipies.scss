@@ -8,7 +8,7 @@
   min-height: 91vh;
   width: 100%;
   h2 {
-    font-size: 1.5em;
+    font-size: 1em;
     text-transform: capitalize;
     text-align: center;
     width: 100%;
@@ -16,30 +16,38 @@
     padding-bottom: 0.4em;
     border-bottom: 4px dotted $leadingColor;
     @media screen and (min-width: $width-mobileM) {
-      font-size: 1.7em;
+      font-size: 1em;
       padding-right: 1em;
       padding-left: 1em;
     }
+    @media screen and (min-width: $width-mobileL) {
+      font-size: 1em;
+      padding-right: 2em;
+      padding-left: 2em;
+    }
     @media screen and (min-width: $width-tablet) {
-      font-size: 1.9em;
+      font-size: 1.2em;
+      padding-right: 2em;
+      padding-left: 2em;
     }
     @media screen and (min-width: $width-laptop) {
-      font-size: 2em;
+      font-size: 1.5em;
     }
     @media screen and (min-width: $width-laptopL) {
-      font-size: 2.5em;
+      font-size: 1.6em;
     }
     @media screen and (min-width: $width-4k) {
-      font-size: 3em;
+      font-size: 2em;
     }
   }
   h3 {
+    font-size: 1em;
     padding-top: 0.5em;
     @media screen and (min-width: $width-laptopL) {
-      font-size: 2em;
+      font-size: 1.5em;
     }
     @media screen and (min-width: $width-4k) {
-      font-size: 2.5em;
+      font-size: 1.8em;
     }
   }
   .btn-container {
@@ -51,28 +59,34 @@
     justify-content: center;
     justify-items: center;
     width: 100%;
+    padding-left: 1em;
+    padding-right: 1em;
     margin-top: 1em;
-    @media screen and (min-width: $width-mobileM) {
-      font-size: 1.1em;
-    }
-    @media screen and (min-width: $width-mobileL) {
-      font-size: 1.2em;
-    }
+    // @media screen and (min-width: $width-mobileM) {
+    //   font-size: 1.1em;
+    // }
+    // @media screen and (min-width: $width-mobileL) {
+    //   font-size: 1.2em;
+    // }
     @media screen and (min-width: $width-tablet) {
       grid-template-columns: repeat(3, 1fr);
-      font-size: 1.3em;
+      padding-left: 3em;
+      padding-right: 3em;
+      font-size: 1.1em;
     }
     @media screen and (min-width: $width-laptop) {
       grid-template-columns: repeat(4, 1fr);
-      font-size: 1.4em;
+      font-size: 1.2em;
     }
     @media screen and (min-width: $width-laptopL) {
       grid-template-columns: repeat(5, 1fr);
-      font-size: 1.6em;
+      font-size: 1.3em;
     }
     @media screen and (min-width: $width-4k) {
       grid-template-columns: repeat(5, 1fr);
-      font-size: 3em;
+      font-size: 2em;
+      padding-right: 5em;
+      padding-left: 5em;
     }
     .filter-btn {
       display: flex;
@@ -98,8 +112,11 @@
   .dishes {
     display: grid;
     margin-top: 1em;
+
     @media screen and (min-width: $width-tablet) {
       grid-template-columns: repeat(2, 1fr);
+      padding-right: 4em;
+      padding-left: 4em;
     }
     @media screen and (min-width: $width-laptop) {
       grid-template-columns: repeat(3, 1fr);
@@ -108,24 +125,34 @@
       grid-template-columns: repeat(4, 1fr);
     }
     .dish {
-      display: grid;
-      grid-template-rows: 3fr 1fr;
+      display: flex;
+      flex-direction: column;
       width: 100%;
-      width: 100%;
+      height: 10em;
       padding-right: 0.5em;
       padding-left: 0.5em;
-      padding-bottom: 2em;
+      @media screen and (min-width: $width-laptopL) {
+        height: 15em;
+      }
+      @media screen and (min-width: $width-4k) {
+        height: 20em;
+      }
       img {
+        display: flex;
+        align-items: center;
+        justify-self: center;
         width: 100%;
-        height: 100%;
+        height: 60%;
         object-fit: cover;
-        border-radius: 2em;
+        border-radius: 1em;
       }
     }
     .item-info {
+      font-size: 0.5em;
       display: flex;
-      flex-direction: column;
       justify-content: center;
+      align-items: center;
+      flex-direction: column;
       width: 100%;
       height: 100%;
       @media screen and (min-width: $width-4k) {
@@ -133,10 +160,7 @@
       }
       header {
         display: flex;
-        align-content: center;
         justify-content: center;
-        width: 100%;
-        height: 100%;
         align-items: flex-start;
         h4 {
           display: flex;
@@ -148,11 +172,13 @@
       button {
         display: flex;
         justify-self: end;
+        align-items: center;
+        justify-content: center;
         background-color: $leadingColor;
         font-weight: bold;
         color: white;
         height: 2em;
-        width: 100%;
+        width: 50%;
         border-radius: 1em;
         justify-content: center;
         @media screen and (min-width: $width-tablet) {
@@ -220,6 +246,7 @@
 .recipies-modal.active {
   display: flex;
   flex-direction: column;
+
   z-index: 100;
   position: fixed;
   top: 0;
@@ -232,6 +259,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 95%;
     min-height: 99vh;

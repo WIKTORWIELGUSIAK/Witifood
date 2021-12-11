@@ -36,8 +36,13 @@
       margin-left: 2em;
       .contact-form-textarea {
         padding: 2.5em;
+        padding-top: 1em;
         padding-left: 1em;
+        height: 10em;
         border-radius: 2em;
+        @media screen and (min-width: $width-tablet) {
+          height: 15em;
+        }
       }
       input {
         padding: 1em;
